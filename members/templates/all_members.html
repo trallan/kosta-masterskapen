@@ -1,0 +1,41 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Kosta Mästerskapen - List of all members
+{% endblock %}
+
+
+{% block content %}
+  <div class="mycard">
+    <!-- <h1 class="text-white">Members</h1> -->
+    <div class="table-container">
+      <table class="table table-based text-white">
+        <thead>
+          <tr>
+            <th>Placement</th>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Golf Club</th>
+            <th>Wins</th>
+            <th>HCP</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for x in mymembers %}
+            <tr>
+              <td>{{ forloop.counter }}</td>
+              <td class="text-capitalize"><span onclick="window.location = 'details/{{ x.slug }}'">{{ x.firstname }}</span></td>
+              <td class="text-capitalize"><span onclick="window.location = 'details/{{ x.slug }}'">{{ x.lastname }}</span></td>
+              <td class="text-capitalize">{{ x.golf_club }}</td>
+              <td>{{ x.wins }}</td>
+              <td >{{ x.hcp }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <button onclick="window.location.href='/'" class="btn btn-outline-light my-3">
+      Gå tillbaka
+    </button>
+  </div>
+{% endblock %}

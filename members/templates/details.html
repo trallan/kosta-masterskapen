@@ -1,0 +1,20 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Details about {{ mymember.firstname }} {{ mymember.lastname }}
+{% endblock %}
+
+{% block content %}
+<div class="d-flex flex-column align-items-center mt-5 text-white p-5">
+  <div class="d-flex flex-column align-items-start text-white bg-dark bg-opacity-50 p-5 rounded-1">
+    <h1 class="text-capitalize text-white mt-5">{{ mymember.firstname }} {{ mymember.lastname }}</h1>
+    <p class="text-capitalize">Phone {{ mymember.phone }}</p>
+    <p class="text-capitalize">Member since: {{ mymember.joined_date }}</p>
+    <p class="text-capitalize">Golf club: {{ mymember.golf_club}} </p>
+    <p class="text-capitalize">HCP {{ mymember.hcp}} </p>
+    <p class="text-capitalize">Golf-id: {{ mymember.golf_id}} </p>
+    <button onclick="window.location.href='/members'" class="btn btn-outline-light ">Tillbaka</button>
+  </div>
+</div>
+ 
+{% endblock %}  

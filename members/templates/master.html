@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  {% load bootstrap5 %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+</head>
+<body id="master-page">
+  <img src="{% static 'golfcourse.jpg' %}">
+<div class="container">
+  <h1 class="d-flex justify-content-center text-capitalize text-white pt-3">Kosta Mästerskapen</h1></li>
+  <ul class="d-flex nav mb-3 justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link link-light" href="/">HEM</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link link-light" href="/members">MEDLEMMAR</a>
+    </li>
+  </ul>
+
+  {% block content %}
+  {% endblock %}
+</div>
+</body>
+</html>

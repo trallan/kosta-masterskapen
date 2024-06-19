@@ -1,0 +1,24 @@
+{% extends "master.html" %}
+{% load static %}
+{% block title %}
+  Kosta mästerskapen
+{% endblock %}
+
+{% block content %}
+  <body>
+    <!-- <div class="d-flex flex-column align-items-center p-5 text-white">
+      <h1 class="text-uppercase">Kosta Mästerskapen</h1>
+    </div> -->
+    <div id="main-container-text" class="d-flex flex-column align-items-start m-5 pt-5">
+        <a class="text-uppercase text-white text-decoration-none">Varmt välkommen</a>
+      <div class="mt-4">
+        <h2 class="text-white">Kosta mästarskapen -</h2>
+        <h2 class="text-white">Kostas golf mästerskap<br> med över 10 medlemmar</h2>
+        <p class="text-white fs-4 mt-4">Se aktuella medlemmar</p>
+      </div>
+      <button onclick="window.location.href='members/'" class="btn btn-outline-light ">
+        Klicka här
+      </button>
+    </div>
+  </body>
+{% endblock %}
