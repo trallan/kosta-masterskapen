@@ -40,6 +40,14 @@ html, body {
   font-size: 48px !important;
 }
 
+#main-container-text {
+  display: flex;
+  margin-top: 10rem;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .container{
   height: 100vh;
 }
@@ -105,13 +113,23 @@ button {
 
 
 @media (max-width: 1024px) {
+
+  #main-container-text {
+    margin-top: 30rem !important;
+    padding-left: 0rem !important;
+  }
+
+  #main-container-text h2 {
+    font-size: 48px;
+  }
+
   #master-page div {
-    max-width: 100%;
+    max-width: 100% !important;
   }
 
   tbody {
-    font-size: x-large;
-    height: 100%;
+    font-size: x-large !important;
+    height: 100% !important;
   }
 }
 
