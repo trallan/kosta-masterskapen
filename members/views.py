@@ -11,6 +11,14 @@ def members(request):
   }
   return HttpResponse(template.render(context, request))
 
+def scoreboard(request):
+  myscoreboard = Member.objects.all().order_by('score').values()
+  template = loader.get_template('scoreboard.html')
+  context = {
+      'myscoreboard': myscoreboard,
+  }
+  return HttpResponse(template.render(context, request))
+
 
 def details(request, slug):
   mymember = Member.objects.get(slug=slug)

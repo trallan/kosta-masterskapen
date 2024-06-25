@@ -1,7 +1,7 @@
 {% extends "master.html" %}
 
 {% block title %}
-  Kosta Mästerskapen - List of all members
+  Kosta Mästerskapen - Scoreboard
 {% endblock %}
 
 
@@ -15,18 +15,20 @@
             <th>Placement</th>
             <th>Firstname</th>
             <th>Lastname</th>
-            <th>Golf Club</th>
             <th>HCP</th>
+            <th>Wins</th>
+            <th>Score</th>
           </tr>
         </thead>
         <tbody>
-          {% for x in mymembers %}
+          {% for x in myscoreboard %}
             <tr>
               <td>{{ forloop.counter }}</td>
               <td class="text-capitalize"><span onclick="window.location = 'details/{{ x.slug }}'">{{ x.firstname }}</span></td>
               <td class="text-capitalize"><span onclick="window.location = 'details/{{ x.slug }}'">{{ x.lastname }}</span></td>
-              <td class="text-capitalize">{{ x.golf_club }}</td>
               <td >{{ x.hcp }}</td>
+              <td>{{ x.wins }}</td>
+              <td >{{ x.score }}</td>
             </tr>
           {% endfor %}
         </tbody>

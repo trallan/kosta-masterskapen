@@ -22,12 +22,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-clzkusp3)g)4+3wmx(tqzplcil8@+k1%*$y=&rge^dgo*d+o8('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://*8febc0a6-68d2-4cfc-a775-85dc8f86e330-00-pp1sp58kv9zm.spock.repl.co/'
+    
 ]
 
 # Application definition

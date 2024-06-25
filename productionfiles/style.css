@@ -12,7 +12,7 @@ html, body {
 #master-page {
   position: relative;
   width: 100%;
-  height: 100%; /* Adjust height as needed */
+  height: 100vh; /* Adjust height as needed */
 }
 
 #master-page::before {
@@ -40,11 +40,11 @@ html, body {
   font-size: 48px !important;
 }
 
-.mycard {
-  height: 30rem;
+.container{
+  height: 100vh;
 }
 
-.mycard span{
+.table-container span{
   cursor: pointer;
 }
 
@@ -54,6 +54,7 @@ html, body {
   /*overflow-y: auto; /* Enable vertical scrolling */
   display: block;
 }
+
 
 table {
     width: 100%;
@@ -78,9 +79,13 @@ thead {
 tbody {
     display: block;
     width: 100%;
-    max-height: 40rem;
+    height: 30rem;
     overflow-y: scroll;
     table-layout: fixed;
+}
+
+li:hover {
+  background-color: rgb(27, 45, 75, 0.3);
 }
 
 tr {
@@ -97,3 +102,16 @@ a {
 button {
   font-family: georgia !important;
 }
+
+
+@media (max-width: 1024px) {
+  #master-page div {
+    max-width: 100%;
+  }
+
+  tbody {
+    font-size: x-large;
+    height: 100%;
+  }
+}
+
